@@ -37,9 +37,9 @@
                         <label for="#">Tiempo de Inversión:</label>
                         <select id="tiempo">
                             <option>Elige una opción</option>
-                            <option value="">1 Año</option>
-                            <option value="">2 Años</option>
-                            <option value="">3 Años</option>
+                            <option value="1">1 Año</option>
+                            <option value="2">2 Años</option>
+                            <option value="3">3 Años</option>
                         </select>
                     </div>
 
@@ -53,17 +53,17 @@
                 </div>
                 <!-- La clase disabled debe ponerse en el contendor anterior para mostrar el resultado -->
                 <div class="post-simulation  disabled" id="post-simulation">
-                    <h3>Teniendo en cuenta que tu tiempo de inversión fue de <span>12 MESES</span> te pagaremos el <span>1.6%</span> de interés mensual.</h3>
+                    <h3>Teniendo en cuenta que tu tiempo de inversión fue de <span id="mostrarTiempo">12 MESES</span> te pagaremos el <span id="mostrarInteres">1.6%</span id> de interés mensual.</h3>
 
                     <div class="total ">
                         <h4>Recibiras un total de:</h4>
-                        <h2>$ <span>000.000</span></h2>
-                        <p>Ganancia:$ <span> 000.000</span></p>
+                        <h2>$ <span id="mostrarTotal">000.000</span></h2>
+                        <p>Ganancia:$ <span id="mostrarGanancias"> 000.000</span></p>
                         
                     </div>
 
                     <div class="notificacion">
-                        <h5>Señor(a) <span>Nombres y apellidos</span> a tu correo electrónico <span>correo@gmail.com</span> hemos enviado las condiciones de nuestro servicio.</h5>
+                        <h5>Señor(a) <span id="mostrarNombres">Nombres y apellidos</span> a tu correo electrónico <span id="mostrarCorreo">correo@gmail.com</span> hemos enviado las condiciones de nuestro servicio.</h5>
                     </div>
                     
                 </div>
