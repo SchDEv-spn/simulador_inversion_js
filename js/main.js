@@ -9,14 +9,18 @@ function simulador() {
     let ctiempo = document.getElementById('tiempo').value;
 
     // ✅ Validación de campos vacíos
-    if (!cnombres || !ctelefono || !cemail || !cmonto || ctiempo === "Elige una opción" || ctiempo === "") {
+    if (!cnombres || !cemail || !cmonto || ctiempo === "Elige una opción" || ctiempo === "") {
         alert("⚠️ Por favor llena todos los campos antes de calcular.");
-        return; // Detiene la función si falta información
+    } else {
+        // ⬇️ Aquí va lo que se ejecuta si todo está bien
+        contPost.classList.remove('disabled');
+        contPre.classList.add('disabled');
+
+        // ... aquí siguen tus cálculos con el switch
     }
 
-    // Si todo está bien, muestra resultados
-    contPost.classList.remove('disabled');
-    contPre.classList.add('disabled');
+
+
 
     ///constantes que capturan los span que muestran los valores
     const mTiempo = document.getElementById('mostrarTiempo');
@@ -57,8 +61,8 @@ function simulador() {
     }
 
     // mostramos resultados en pantalla
-    mTotal.textContent = total;
-    mGanancias.textContent = ganancia;
+    mTotal.textContent = total.toFixed(2);
+    mGanancias.textContent = ganancia.toFixed(2);
     mNombres.textContent = cnombres;
     mCorreo.textContent = cemail;
 }
